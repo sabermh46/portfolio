@@ -1,0 +1,15 @@
+
+.fadeInLeft {
+    visibility: visible;
+    animation: fil 1s ease 1s 1;
+}
+@keyframes fil {
+    from {
+        opacity: 0;
+        transform: translateX(-110%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
