@@ -6,7 +6,19 @@ var links = document.querySelectorAll('.links a img');
 var brand = document.querySelector('.brand')
 var sec1left = document.querySelector('div.details')
 var sec1right = document.querySelector('.section.section1 .image')
+var indexes = document.querySelectorAll('.section.section2 .indexes .index')
 
+
+
+function doIndex(){
+
+    indexes.forEach((index, i)=>{
+        var link = index.querySelector('a')
+        var bg = index.querySelector('.bg')
+        bg.textContent = link.textContent
+    })
+
+}
 
 function addClassList(){
     sec1left.classList.add('fadeInLeft')
@@ -60,6 +72,7 @@ window.addEventListener('DOMContentLoaded', (e)=> {
     allScrollElements()
     GenerateLinks()
     addClassList()
+    doIndex()
 
 })
 
