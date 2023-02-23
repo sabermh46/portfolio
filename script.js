@@ -8,7 +8,12 @@ var sec1left = document.querySelector('div.details')
 var sec1right = document.querySelector('.section.section1 .image')
 var indexes = document.querySelectorAll('.section.section2 .indexes .index')
 
+var pattern = document.querySelector('div.svg')
 
+
+function movePattern(y){
+    pattern.style.top = `-${y * 0.4}px`
+}
 
 function doIndex(){
 
@@ -62,6 +67,7 @@ function allScrollElements(){
         dofloat1(y)
         dofloat2(y)
         doStretch(y)
+        movePattern(y)
     }
 }
 
@@ -73,6 +79,6 @@ window.addEventListener('DOMContentLoaded', (e)=> {
     GenerateLinks()
     addClassList()
     doIndex()
-
+    
 })
 
