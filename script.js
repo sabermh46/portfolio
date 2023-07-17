@@ -79,6 +79,57 @@ window.addEventListener('DOMContentLoaded', (e)=> {
     GenerateLinks()
     addClassList()
     doIndex()
+
+    class ActivateInView {
+        constructor(element) {
+            this.element = element;
+            this.init();
+        }
+    
+        init() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        this.onInView(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+    
+            observer.observe(this.element);
+        }
+    
+        onInView(element) {
+            element.classList.add('active');
+        }
+    }
+
+
+    var fromRightToLeft_s = document.querySelectorAll('.fromRightToLeft')
+
+    fromRightToLeft_s.forEach(item=>{
+        new ActivateInView(item)
+    })
+    
+    var fromLeftToRight_s = document.querySelectorAll('.fromLeftToRight')
+    
+    
+    fromLeftToRight_s.forEach(item=>{
+        new ActivateInView(item)
+    })
+    
+    var fromDownToTop_s = document.querySelectorAll('.fromDownToTop')
+    
+    fromDownToTop_s.forEach(item=>{
+        new ActivateInView(item)
+    })
+
+    var sections = document.querySelectorAll('.section');
+    sections.forEach(function(section) {
+      if (section.querySelector('.heading')) {
+        section.classList.add('has-heading');
+      }
+    });
     
 })
 

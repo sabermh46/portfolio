@@ -132,7 +132,7 @@ div.stretch1 {
 
 .section {
     max-width: 1200px;
-    width: calc(100% - 40px);
+    width: calc(100% - 60px);
     margin: 0 auto;
     z-index: 9;
 }
@@ -326,4 +326,171 @@ div.info {
     .section.section1 {
         flex-direction: column-reverse;
     }
+}
+.has-heading {
+    padding-top: 80px;
+}
+.heading {
+    letter-spacing: 10px;
+    font-size: 54px;
+    background: linear-gradient(45deg, #f6eaff 20%, #93ffa9); /* Define your gradient colors here */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+.item1 a {
+    color: white;
+    display: block;
+    font-size: 18px;
+}
+
+.fromRightToLeft {
+    -webkit-transform: translateX(100px) !important;
+        -ms-transform: translateX(100px) !important;
+            transform: translateX(100px) !important;
+    opacity: 0 !important;
+    -webkit-transition: transform 1s ease, opacity 1s ease;
+    -o-transition: transform 1s ease, opacity 1s ease;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.fromLeftToRight {
+    -webkit-transform: translateX(-100px) !important;
+        -ms-transform: translateX(-100px) !important;
+            transform: translateX(-100px) !important;
+    opacity: 0 !important;
+    -webkit-transition: transform 1s ease, opacity 1s ease;
+    -o-transition: transform 1s ease, opacity 1s ease;
+    transition: transform 1s ease, opacity 1s ease;
+}
+.fromLeftToRight.active, .fromRightToLeft.active {
+    -webkit-transform: translateX(0px) !important;
+        -ms-transform: translateX(0px) !important;
+            transform: translateX(0px) !important;
+    opacity: 1 !important;
+}
+.fromDownToTop {
+    -webkit-transform: translateY(100px) !important;
+        -ms-transform: translateY(100px) !important;
+            transform: translateY(100px) !important;
+    opacity: 0 !important;
+    -webkit-transition: transform 1s ease, opacity 1s ease;
+    -o-transition: transform 1s ease, opacity 1s ease;
+    transition: transform 1s ease, opacity 1s ease;
+}
+.fromTopToDown {
+    -webkit-transform: translateY(-100px) !important;
+        -ms-transform: translateY(-100px) !important;
+            transform: translateY(-100px) !important;
+    opacity: 0 !important;
+    -webkit-transition: transform 1s ease, opacity 1s ease;
+    -o-transition: transform 1s ease, opacity 1s ease;
+    transition: transform 1s ease, opacity 1s ease;
+}
+.fromTopToDown.active, .fromDownToTop.active {
+    -webkit-transform: translateY(0px) !important;
+        -ms-transform: translateY(0px) !important;
+            transform: translateY(0px) !important;
+    opacity: 1 !important;
+}
+
+.experiences {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+}
+
+.ex-container {
+    position: relative;
+    min-width: 300px;
+    height: 400px;
+}
+.ex-container .image {
+    position: absolute;
+    height: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.ex-container .image img {
+    height: 100%;
+    filter: drop-shadow(1px 3px 4px rgba(0, 0, 0, 0.334));
+}
+.ex-container .body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    z-index: -1;
+    padding: 20px;
+    border-radius: 16px;
+    padding-top: 150px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    text-align: center;
+}
+
+.bbg1 {
+    background: #008fd1dc;
+}
+.bbg2 {
+    background: rgb(255, 143, 143);
+}
+.bbg3 {
+    background: rgb(173, 130, 238);
+}
+.bbg4 {
+    background: rgb(108, 108, 255);
+}
+.bbg5 {
+    background: tomato;
+}
+
+
+
+
+
+
+
+
+
+
+.project_containe {
+    
+}
+.project_containe .project {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.project .item {
+    min-width: 45%;
+    max-width: 49%;
+    flex: 1;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.project .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.item1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 28px;
+    text-align: center;
+}
+.item1 h1 {
+    background: linear-gradient(45deg, #eeff69 20%, #3af9b0); /* Define your gradient colors here */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
